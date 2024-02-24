@@ -20,9 +20,9 @@ interface ModalStore {
 }
 
 export const useModal = create<ModalStore>((set) => ({
-  type: "createServer",
+  type: null,
   data: {},
-  isOpen: true,
+  isOpen: false,
   onOpen: (type, data = {}) => set({ isOpen: true, type, data }),
   onClose: () => set({ type: null, isOpen: false })
 }));
